@@ -7,7 +7,7 @@ public class Converter {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("🌍 Welcome to the Offline Java Currency Converter!");
+        System.out.println(" Welcome to the Offline Java Currency Converter!");
         System.out.print("Enter base currency (e.g., USD): ");
         String base = scanner.nextLine().trim().toUpperCase();
 
@@ -34,14 +34,14 @@ public class Converter {
         String key = base + "_" + target;
 
         if (!rates.containsKey(key)) {
-            System.out.println("❌ Conversion rate for " + base + " to " + target + " not available.");
+            System.out.println(" Conversion rate for " + base + " to " + target + " not available.");
             return;
         }
 
         double rate = rates.get(key);
         double result = rate * amount;
 
-        System.out.printf("🔁 1 %s = %.4f %s\n", base, rate, target);
-        System.out.printf("💰 %.2f %s = %.2f %s\n", amount, base, result, target);
+        System.out.printf(" 1 %s = %.4f %s\n", base, rate, target);
+        System.out.printf(" %.2f %s = %.2f %s\n", amount, base, result, target);
     }
 }
